@@ -10,18 +10,28 @@ Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub
 
 console.log("Desenvolvimento 11");
 
+
+function mostraElemntos(lista){
+    console.log('\nElementos do Array:\n');
+    for(const c of lista){
+        console.log(c);
+    }
+}
+
+function mostraPropriedades(obj) {
+    console.log('\nPropriedades de um objeto:\n');
+    for(const campos in banco){
+        console.log(`${campos} : ${banco[campos]}`);
+    }
+}
+
 const casa = ["sala", "quarto", "banheiro", "cozinha"];
 
-for(const c of casa){
-console.log(c);
-}
-    let banco = {
-        nome : "Emanuel",
-        conta : "1234-9",
-        agencia : "0047",
-        saldo : 1000.00
-    };
-
-for(const campos in banco){
-    console.log(`${campos} : ${banco[campos]}`);
-}
+let banco = {
+    nome : "Emanuel",
+    conta : "1234-9",
+    agencia : "0047",
+    saldo : 1000.00
+};
+mostraElemntos(casa);
+mostraPropriedades(banco);
